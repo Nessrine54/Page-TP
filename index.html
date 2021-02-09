@@ -1,51 +1,120 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  <charset="UTF-8">
-		  <style>
+	  <title> Parcel Sandbox </title>
+	  <charset="UTF-8" />
+	  <style>
+		  .deco div{
+			  width: 200px; 
+			  height: 200px;
+			  border: solid 1px rgb(0, 0, 0);
+		   }
+          .deco{
+		      display : flex;
+		      justify-content:center;
+	       }
 
-			/*  .bloc{
-				  display: flex;
-				  width: 500px;
-				  flex-flow: row;
-			  }*/
-			  
-			  .bloc div {
-					width: 200px;
-					height: 200px;
-					border: solid 3px #000;
-					
-					}
-					.bloc{
-				  display: flex;
-					justify-content:space-evenly;}
-				h1{
-					background-color: cornflowerblue;
-				}
-				   
-		  </style>
+		  
+
+		
+	  </style>
 	</head>
 	<body>
-	  <h1><center>the city's weather</center></h1>
-	<div class="bloc">
-	  <div >
-		  <h2>Bejaia</h2>
-		  <p>16 °C ensoleillé</p>
-		  <p> <centre> <img src="Images/soleil.png" height="50"  width="70"> </centre>   </p>
-	  </div>
+	<center><h1> Météo HTML  </h1></center>
+	<center><h1>  <img src=" TP html/météo.JPG"  width="80" height="80"  ></h1></center>
+	  <div id = "app"> <strong> <em> <h1 id="koukou"> <center> Météo de quelques villes en Algérie <style>
+		#koukou{
+			background: rgb(0, 255, 255);
+		}
+	</style> </center></h1></em></strong> 	 
+	   
+	
+	<div class="deco">
+	
+	
 	  <div>
-		<h2>Constantine</h2>
-		<p>11 °C nuageux</p>
-		<p class="image"> <centre><img src="Images/nuageux.jpg" height="50"  width="70"> </centre>   </p>
-	
+		
+		  <h2 id="koukou">
+		<center><em>Constantine</em> </center>
+		  </h2>
+		  <h3> 
+		<center> 11°C  <img src=" TP html/nuageux.JPG"  width="50" height="50"  ></center>
+		  </h3>
+		  <p>
+		  <ul>
+		    <li>Précipitation : 0% </li>
+			<li>Humidité : 60%</li>
+			<li>Vent : 27 Km/h</li>
+			</ul>
+		  </p>
+		  
 	  </div>
-	   <div>
-		<h2>Oran</h2>
-		<p>14 °C ensoleillé</p>
-		<p> <centre><img src="Images/soleil.png" height="50"  width="70"> </centre>   </p>
-	
-	 </div>
+
+	  <div> 
+		  <h2 id="koukou">
+		<center><em>Mostaganem </em></center>
+		  </h2>
+		  <h3> 
+		<center>15°C    <img src=" TP html/nuageux.JPG"  width="50" height="50"  ></center>
+		</h3>
+		<p>
+			<ul>
+			<li>Précipitation : 8% </li>
+		    <li>Humidité : 62%</li>
+		    <li>Vent : 19 Km/h </li>
+		</ul>
+        </p>
+	  </div>
+
+	  <div>
+		  <h2 id="koukou">
+		<center><em>Béjaia</em></center>
+		 </h2>
+		 <h3> 
+		<center>16°C    <img src=" TP html/ensoleillé.JPG"  width="45" height="45"  ></center>
+		</h3>
+		<p>
+		<ul>
+		<li>Précipitation : 0% </li>
+	    <li>Humidité : 52% </li>
+	    <li>Vent : 14 Km/h </li>
+		</ul>
+	    </p>
+	  </div>
+
+	  <div>
+		  <h2 id="koukou">
+		<center><em>Oran</em></center>
+		 </h2>
+		 <h3> 
+		<center>16°C    <img src=" TP html/nuageux.JPG"  width="50" height="50"  ></center>
+		</h3>
+		<p>
+		<ul>
+		<li>Précipitation : 2%</li>
+	    <li>Humidité : 52%</li>
+		<li>Vent : 14 Km/h</li>
+		</ul>
+	    </p>
+	  </div>
+
+	  <div>
+		  <h2 id="koukou">
+		<center><em>	Alger  </em></center>
+		  </h2> 
+		  <h3> 
+		<center>16°C <img src=" TP html/sombre.JPG"  width="45" height="45"  ></center>
+		</h3>
+		<p>
+		<ul>
+			<li>Précipitation : 1% </li>
+			<li>Humidité : 63% </li>
+			<li>Vent : 8 Km/h </li>
+		</ul>
+	    </p>
+	  </div>
 	</div>
-	</body>
+      <p> Par : <em>Abdelaali BOUCHACHI</em></p>
 	
+	</body>
 </html>
