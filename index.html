@@ -4,40 +4,54 @@
 
 		<title>the city's weather</title>
 		<meta charset="UTF-8" />
-		
-   
-   
-    
-    
-		  
+		<link rel="stylesheet" href="css/meteo.css">
 	</head>
-	<body>
-		<label >Choisissez une ville:</label>
-    <select name="ville" id="Toto" onchange=showCity()>
-        <option value="">--Please choose an option--</option>
-        <option value="Constantine">Constantine</option>
-        <option value="Alger">Alger</option>
-        <option value="Mostaghanem">Oran</option>
-    </select>
-	  <h1><center>the city's weather</center></h1>
-	<div class="bloc">
-	  <div id="Alger" class="city" >
-		  <h2>Bejaia</h2>
-		  <p>16 °C ensoleillé</p>
-		  <p> <img src="Images/soleil.png" height="50"  width="70">   </p>
-	  </div>
+	<body onload="showCity()" >
+      <script src="js/meteo.js"></script>
+	  <h1>La météo du 08/02/2021</h1>
+
+	  <label >Choisissez une ville:</label>
+  
+	  
+	  
+	  <select name="ville" id="Toto" onchange=showCity()>
+		  <option value="">--Please choose an option--</option>
+		  <option value="Constantine">Constantine</option>
+		  <option value="Alger">Alger</option>
+		  <option value="Mostaganem">Mostaganem</option>
+	  </select>
+
+	  <p id=gauche>vous avez selectionné : <input type="text" class="city"/> </p>
+
+	<div class="bloc" >
+
+	  <div id="Alger" class="city">
+		  <h2>Alger</h2>
+		  <p >16 °C ensoleillé </p>
+		  <p> <img class="displayed" src="Images/soleil.png" height="50"  width="70">   </p>
+    </div>
+
 	  <div id="Constantine" class="city">
-		<h2>constantine</h2>
+		<h2>Constantine</h2>
 		<p>11 °C nuageux</p>
-		<p class="image"> <img src="Images/nuageux.jpg" height="50"  width="70">   </p>
+		<p> <img class="displayed" src="Images/nuageux.jpg" height="50"  width="70">   </p>
 	
 	  </div>
-	   <div id="Mostaghanem" class="city">
-		<h2>Mostaghanem</h2>
+
+	   <div id="Mostaganem" class="city">
+		<h2>Mostaganem</h2>
 		<p>14 °C ensoleillé</p>
-		<p> <img src="Images/soleil.png" height="50"  width="70">   </p>
-	
-	 </div>
-	</div>
+		<p> <img class="displayed" src="Images/soleil.png" height="50"  width="70">   </p>
+	   </div>
+       </div> 
+	   <footer id=lebas>
+		<p>Réalisé par : Nessrine BOUKEBECHE & Abdelaali BOUCHACHI</p>
+		<p>
+			Icone météo par
+			<a href="https://www.google.com/search?q=icon+m%C3%A9t%C3%A9o+nuageux+jpg&sxsrf=ALeKk01Zkyz2ppNWMg7BvrupBV3TM0VCdw:1612973754874&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiCvsO929_uAhXKmeAKHZoWBw4Q_AUoAXoECBAQAw&biw=1366&bih=600"
+			>Nock Full Option
+			</a>
+		</p>
+	</footer>
 	</body>	
 </html>
