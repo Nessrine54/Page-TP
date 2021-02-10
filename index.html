@@ -1,83 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TP Météo HTML</title>
-    <meta charset="UTF-8" />
-    <label htmlFor="toto">Choisir votre ville:</label>
-    <select id="toto" >
-        <option value="">--Please choose an option--</option>
-        <option value="Constantine">constantine</option>
-        <option value="Alger">Alger</option>
-        <option value="Oran">Oran</option>
 
-    </select>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+		<title>the city's weather</title>
+		<meta charset="UTF-8" />
+		
+   
     <script>
-     $(document).ready(function () {
-       $("#toto").on('change',function () {
-           $(".city").hide();
-         $("#" + $(this).val()).fadeIn(700);
-       }).change();
-     })
-
-
-
+        function showCity() {
+			
+            let nomVilleSelectionnee = document.getElementById("Toto").value;
+            let cities = document.getElementsByClassName("city");
+            let l=cities.length;
+            for (i=0; i<l; i++) {
+    if (cities[i].id ==  nomVilleSelectionnee) {
+      cities[i].style.display= "";
+	  
+    } else {
+        cities[i].style.display= "none";
+    }
+  }
+}
+    
     </script>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+		  <style>
 
-        h1 {
-            background-color: rgb(29, 214, 190);
-            color: rgb(80, 55, 55);
-            text-align: center;
-        }
-
-       
-
-        .flex {
-            display: flex;
-            justify-content: center;
-            border: 3px solide rgb(53, 168, 114);
-        }
-
-        .flex div {
-            text-align: center;
-            background-color: rgb(32, 83, 90);
-            width: 200px;
+			  
+			  .bloc div {
+					width: 200px;
 					height: 200px;
 					border: solid 3px #000;
-        }
-        .city{
+					
+					}
+				.bloc{
+				  display: flex;
+				  justify-content:space-evenly;}
+				h1{
+					background-color: cornflowerblue;
+				}
 
-            display: none;
-        }
-    </style>
-</head>
-<body >
-
-<h1>TP Météo HTML</h1>
-<div class="flex">
-    <div id="Constantine" class="city">
-        <h2>Constantine</h2>
-        <p>11°, ensoleillé</p>
-        <img src="Images/soleil.png" alt="Image non dispo" width="90" />
-    </div>
-
-    <div id="Alger" class="city">
-        <h2>Alger</h2>
-        <p>7°, nuageux</p>
-        <img src="Images/nuageux.jpg" alt="Image non dispo" width="90" />
-    </div>
-
-    <div id="Oran" class="city">
-        <h2>Oran</h2>
-        <p>12°, ensolleilé</p>
-        <img src="Images/soleil.png" alt="Image non dispo" width="90" />
-    </div>
-</div>
-
-
-</body>
+			
+				   
+		  </style>
+	</head>
+	<body>
+		<label >Choisissez une ville:</label>
+    <select name="ville" id="Toto" onchange=showCity()>
+        <option value="">--Please choose an option--</option>
+        <option value="Constantine">Constantine</option>
+        <option value="Alger">Alger</option>
+        <option value="Mostaghanem">Oran</option>
+    </select>
+	  <h1><center>the city's weather</center></h1>
+	<div class="bloc">
+	  <div id="Alger" class="city" >
+		  <h2>Bejaia</h2>
+		  <p>16 °C ensoleillé</p>
+		  <p> <img src="Images/soleil.png" height="50"  width="70">   </p>
+	  </div>
+	  <div id="Constantine" class="city">
+		<h2>constantine</h2>
+		<p>11 °C nuageux</p>
+		<p class="image"> <img src="Images/nuageux.jpg" height="50"  width="70">   </p>
+	
+	  </div>
+	   <div id="Mostaghanem" class="city">
+		<h2>Mostaghanem</h2>
+		<p>14 °C ensoleillé</p>
+		<p> <img src="Images/soleil.png" height="50"  width="70">   </p>
+	
+	 </div>
+	</div>
+	</body>	
 </html>

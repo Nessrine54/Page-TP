@@ -1,0 +1,23 @@
+
+		  <style>
+
+			  
+            .bloc div {
+                  width: 200px;
+                  height: 200px;
+                  border: solid 3px #000;
+                  
+                  }
+              .bloc{
+                display: flex;
+                justify-content:space-evenly;}
+              h1{
+                  background-color: cornflowerblue;
+              }
+              .bloc{
+                  display: "none";
+              }
+
+          
+                 
+        </style>
